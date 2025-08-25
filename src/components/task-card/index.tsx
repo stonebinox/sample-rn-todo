@@ -1,4 +1,4 @@
-import { Image, Animated } from "react-native";
+import { Image, Animated, TouchableOpacity } from "react-native";
 import { useEffect, useMemo, useState, useRef } from "react";
 
 import { Task, useTasks } from "../../contexts/task-provider";
@@ -9,6 +9,7 @@ import {
   DataRowText,
   OverdueText,
   RedDot,
+  SecondaryButton,
   TaskContainer,
   TaskContentContainer,
   TaskTitle,
@@ -171,15 +172,11 @@ export const TaskCard = ({ task }: TaskCardProps) => {
               <DataRowText style={{ color: "#0F4A4A", fontWeight: "bold" }}>
                 Undo? ({undoTimer})
               </DataRowText>
-              <CheckBoxContainer
-                onPress={handleUndo}
-                isChecked={false}
-                style={{ marginLeft: 12, borderColor: "#0F4A4A" }}
-              >
+              <SecondaryButton onPress={handleUndo}>
                 <DataRowText style={{ color: "#0F4A4A", fontWeight: "bold" }}>
                   Undo
                 </DataRowText>
-              </CheckBoxContainer>
+              </SecondaryButton>
             </DataRow>
           )}
         </TaskContentContainer>

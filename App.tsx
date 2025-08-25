@@ -9,7 +9,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
-import { Dimensions, View, StyleSheet, Text, Modal } from "react-native";
+import { Dimensions, View, StyleSheet, Text, Modal, Image } from "react-native";
 import { SceneMap, TabBar, TabView } from "react-native-tab-view";
 import { useState } from "react";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
@@ -20,6 +20,9 @@ import {
   Container,
   FabButton,
   FabButtonInner,
+  FolderContainer,
+  FolderImage,
+  FolderText,
   HeaderBar,
   IconGroup,
   StyledIcon,
@@ -33,6 +36,8 @@ import History from "./assets/history.png";
 import { TasksView } from "./src/components/task-view";
 import { TaskProvider } from "./src/contexts/task-provider";
 import { AddTaskModal } from "./src/components/add-task-modal";
+import FolderIcon from "./assets/folder.png";
+import CaretDown from "./assets/caret-down.png";
 
 const TAB_COLOR = "#0F4A4A";
 
@@ -185,6 +190,11 @@ export default function App() {
           <View style={{ flex: 1, paddingBottom: 96 }}>
             <UserGreetingRow>
               <Title>Good morning, Louis!</Title>
+              <FolderContainer>
+                <FolderImage source={FolderIcon} />
+                <FolderText>All</FolderText>
+                <Image source={CaretDown} />
+              </FolderContainer>
             </UserGreetingRow>
 
             <TabView

@@ -89,3 +89,21 @@ export const FabButtonInner = styled.View`
   shadow-radius: 4px;
   elevation: 8;
 `;
+
+export const FolderContainer = styled.TouchableOpacity`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+`;
+
+export const FolderImage = styled.Image`
+  width: 16px;
+  height: 16px;
+`;
+
+export const FolderText = styled.Text`
+  font-family: Inter_600SemiBold;
+  font-size: 15px;
+  color: #161616;
+`;

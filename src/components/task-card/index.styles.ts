@@ -85,3 +85,12 @@ export const CheckBoxContainer = styled.TouchableOpacity<CheckBoxContainerProps>
   justify-content: center;
   align-items: center;
 `;
+
+export const SecondaryButton = styled.TouchableOpacity`
+  padding: 10px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #ccc;
+  margin: 0 4px;
+  width: auto;
+`;
