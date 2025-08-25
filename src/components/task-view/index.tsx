@@ -1,5 +1,3 @@
-import { Text } from "react-native";
-
 import { TasksContainer } from "./index.styles";
 import { useTasks } from "../../contexts/task-provider";
 import { TaskCard } from "../task-card";
