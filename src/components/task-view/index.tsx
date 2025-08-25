@@ -1,5 +1,5 @@
 import { TasksContainer } from "./index.styles";
-import { useTasks } from "../../contexts/task-provider";
+import { Task, useTasks } from "../../contexts/task-provider";
 import { TaskCard } from "../task-card";
 
 export const TasksView = () => {
@@ -14,7 +14,7 @@ export const TasksView = () => {
         gap: 14,
       }}
     >
-      {tasks.map((task) => (
+      {tasks.map((task: Task) => (
         <TaskCard key={task.id} task={task} />
       ))}
     </TasksContainer>
