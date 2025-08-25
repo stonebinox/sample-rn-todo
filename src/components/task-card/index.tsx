@@ -34,6 +34,8 @@ export const TaskCard = ({ task }: TaskCardProps) => {
   const animationRef = useRef<NodeJS.Timeout | null>(null);
 
   const checkTask = () => {
+    if (showUndo) return;
+
     if (!isChecked) {
       setIsChecked(true);
       setShowUndo(true);
@@ -169,12 +171,9 @@ export const TaskCard = ({ task }: TaskCardProps) => {
           </DataRow>
           {showUndo && (
             <DataRow style={{ marginTop: 8, alignItems: "center" }}>
-              <DataRowText style={{ color: "#0F4A4A", fontWeight: "bold" }}>
-                Undo? ({undoTimer})
-              </DataRowText>
               <SecondaryButton onPress={handleUndo}>
                 <DataRowText style={{ color: "#0F4A4A", fontWeight: "bold" }}>
-                  Undo
+                  Undo? ({undoTimer})
                 </DataRowText>
               </SecondaryButton>
             </DataRow>
