@@ -214,7 +214,10 @@ export default function App() {
                     borderRadius: 3,
                     borderColor: "#1C385D",
                   }}
-                  style={{ backgroundColor: "#F9FAFB", marginBottom: 16 }}
+                  style={{
+                    backgroundColor: "#F9FAFB",
+                    marginBottom: 16,
+                  }}
                   activeColor="#1C385D"
                   inactiveColor="#333333"
                 />
